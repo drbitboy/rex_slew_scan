@@ -4,7 +4,7 @@
 
 ### Usage
 
-make run
+    make run
 
 ### Expected typical output
 
