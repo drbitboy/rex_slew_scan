@@ -2,9 +2,11 @@
 
 ## Quick start
 
-Usage:  make run
+### Usage
 
-Typical output:
+make run
+
+### Expected typical output
 
     {
       "Scan_begin": {
@@ -33,3 +35,19 @@ Typical output:
         "Min_Angular_Slew_Axis_J2k": "[-0.37315828805084317, 0.23518107614331446, -0.8974646251986964]"
       }
     }
+
+### Modeled behavior
+
+* NH S/C at nominal initial attitude at 2021-300T12:00:00
+  * REX boresight (VB) pointed at Earth (Aimpt)
+  * S/C +Z (Roll) rolled to NEP (Rollref)
+* NH slews to point REX boresight (VB) at initial RA=10deg Dec=-20deg (Aimpt)
+  * Select roll to minimum angular magnitude from initial attitude
+* NH scans to point REX boresight (VB) at final RA=10deg Dec=+40deg (Aimpt)
+  * Select scan axis as cross product of initial and final aimpoints
+
+### TODO
+
+* Add selected UTC to output
+* Add options e.g. alternate aimpoints
+
